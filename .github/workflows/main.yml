@@ -47,7 +47,8 @@ jobs:
         cd /home/runner
         git clone -b openwrt-18.06-dev https://github.com/project-openwrt/openwrt.git
         git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
-        sudo chown -R runner:runner openwrt luci-theme-argon
+        git clone -b master https://github.com/fw876/helloworld.git
+        sudo chown -R runner:runner openwrt luci-theme-argon helloworld
         cd /home/runner/openwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
